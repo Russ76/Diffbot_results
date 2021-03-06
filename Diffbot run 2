@@ -1,0 +1,212 @@
+rod@raspi:~$ roslaunch diffbot_bringup bringup_with_laser.launch
+... logging to /home/rod/.ros/log/a310aa38-7ecb-11eb-a649-29bca9b2d032/roslaunch-raspi-1847.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+WARN: unrecognized 'param' tag in <include> tag
+started roslaunch server http://raspi:34803/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /diffbot/hardware_interface/joints: ['front_left_whee...
+ * /diffbot/joint_state_controller/extra_joints: [{'name': 'rear_c...
+ * /diffbot/joint_state_controller/publish_rate: 50
+ * /diffbot/joint_state_controller/type: joint_state_contr...
+ * /diffbot/mobile_base_controller/angular/z/has_acceleration_limits: True
+ * /diffbot/mobile_base_controller/angular/z/has_velocity_limits: True
+ * /diffbot/mobile_base_controller/angular/z/max_acceleration: 6.0
+ * /diffbot/mobile_base_controller/angular/z/max_velocity: 2.0
+ * /diffbot/mobile_base_controller/base_frame_id: base_footprint
+ * /diffbot/mobile_base_controller/left_wheel: front_left_wheel_...
+ * /diffbot/mobile_base_controller/linear/x/has_acceleration_limits: True
+ * /diffbot/mobile_base_controller/linear/x/has_velocity_limits: True
+ * /diffbot/mobile_base_controller/linear/x/max_acceleration: 0.6
+ * /diffbot/mobile_base_controller/linear/x/max_velocity: 0.2
+ * /diffbot/mobile_base_controller/pose_covariance_diagonal: [0.001, 0.001, 0....
+ * /diffbot/mobile_base_controller/publish_rate: 50
+ * /diffbot/mobile_base_controller/right_wheel: front_right_wheel...
+ * /diffbot/mobile_base_controller/twist_covariance_diagonal: [0.001, 0.001, 0....
+ * /diffbot/mobile_base_controller/type: diff_drive_contro...
+ * /diffbot/mobile_base_controller/wheel_radius: 0.0325
+ * /diffbot/mobile_base_controller/wheel_separation: 0.15
+ * /diffbot/robot_description: <?xml version="1....
+ * /diffbot/ydlidar_lidar_publisher/abnormal_check_count: 4
+ * /diffbot/ydlidar_lidar_publisher/angle_max: 180.0
+ * /diffbot/ydlidar_lidar_publisher/angle_min: -180.0
+ * /diffbot/ydlidar_lidar_publisher/auto_reconnect: True
+ * /diffbot/ydlidar_lidar_publisher/baudrate: 230400
+ * /diffbot/ydlidar_lidar_publisher/device_type: 0
+ * /diffbot/ydlidar_lidar_publisher/frame_id: laser_frame
+ * /diffbot/ydlidar_lidar_publisher/frequency: 10.0
+ * /diffbot/ydlidar_lidar_publisher/ignore_array: 
+ * /diffbot/ydlidar_lidar_publisher/intensity: False
+ * /diffbot/ydlidar_lidar_publisher/invalid_range_is_inf: False
+ * /diffbot/ydlidar_lidar_publisher/inverted: True
+ * /diffbot/ydlidar_lidar_publisher/isSingleChannel: False
+ * /diffbot/ydlidar_lidar_publisher/lidar_type: 1
+ * /diffbot/ydlidar_lidar_publisher/port: /dev/ydlidar
+ * /diffbot/ydlidar_lidar_publisher/range_max: 16.0
+ * /diffbot/ydlidar_lidar_publisher/range_min: 0.1
+ * /diffbot/ydlidar_lidar_publisher/resolution_fixed: True
+ * /diffbot/ydlidar_lidar_publisher/reversion: True
+ * /diffbot/ydlidar_lidar_publisher/sample_rate: 9
+ * /diffbot/ydlidar_lidar_publisher/support_motor_dtr: False
+ * /rosdistro: noetic
+ * /rosversion: 1.15.9
+
+NODES
+  /diffbot/
+    base_link_to_laser4 (tf/static_transform_publisher)
+    controller_spawner (controller_manager/spawner)
+    diffbot_base (diffbot_base/diffbot_base)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rosserial_teensy (rosserial_python/serial_node.py)
+    ydlidar_lidar_publisher (ydlidar_ros_driver/ydlidar_ros_driver_node)
+
+ROS_MASTER_URI=http://192.168.1.179:11311/
+
+process[diffbot/diffbot_base-1]: started with pid [1863]
+process[diffbot/controller_spawner-2]: started with pid [1864]
+process[diffbot/rosserial_teensy-3]: started with pid [1865]
+process[diffbot/robot_state_publisher-4]: started with pid [1866]
+process[diffbot/ydlidar_lidar_publisher-5]: started with pid [1869]
+process[diffbot/base_link_to_laser4-6]: started with pid [1870]
+[ INFO] [1615070999.381819602]: YDLIDAR ROS Driver Version: 1.0.0
+[ INFO] [1615070999.576078273]: Waiting for model URDF on the ROS param server at location: /diffbot/diffbot/robot_description
+YDLidar SDK initializing
+YDLidar SDK has been initialized
+[YDLIDAR]:SDK Version: 1.0.3
+[CYdLidar] Error, cannot bind to the specified serial port[/dev/ydlidar] and baudrate[230400]
+[CYdLidar::initialize] Error initializing YDLIDAR check Comms.
+[ERROR] [1615070999.735053792]: Unknown error
+
+[ INFO] [1615070999.788398856]: Initializing DiffBot Hardware Interface ...
+[ INFO] [1615070999.789765866]: Number of joints: 2
+[ INFO] [1615070999.791095327]: pid namespace: pid/left_motor
+[ INFO] [1615070999.792300345]: Initialize PID
+[ INFO] [1615070999.793489015]: Initializing dynamic reconfigure in namespace /diffbot/pid/left_motor
+[ INFO] [1615070999.887357827]: Update PID Gains: F=0.8, P=0.35, I=0.5, D=0.01, out_min=-6.15385, out_max=6.15385
+[ INFO] [1615070999.914458657]: Initialized dynamic reconfigure
+[ INFO] [1615070999.914861756]: Initialized PID: F=0.8, P=0.35, I=0.5, D=0.01, out_min=-6.15385, out_max=6.15385
+[ INFO] [1615070999.915077534]: Update PID output limits: lower=6.15385, upper=-6.15385
+[ INFO] [1615070999.915260114]: pid namespace: pid/right_motor
+[ INFO] [1615070999.915427827]: Initialize PID
+[ INFO] [1615070999.915547880]: Initializing dynamic reconfigure in namespace /diffbot/pid/right_motor
+[ INFO] [1615070999.995873276]: Update PID Gains: F=0.8, P=0.35, I=0.5, D=0.01, out_min=-6.15385, out_max=6.15385
+[ INFO] [1615071000.023189355]: Initialized dynamic reconfigure
+[ INFO] [1615071000.024331051]: Initialized PID: F=0.8, P=0.35, I=0.5, D=0.01, out_min=-6.15385, out_max=6.15385
+[ INFO] [1615071000.025448900]: Update PID output limits: lower=6.15385, upper=-6.15385
+[ INFO] [1615071000.027082346]: ... Done Initializing DiffBot Hardware Interface
+[ INFO] [1615071000.241915743]: [YDLIDAR INFO] Now YDLIDAR is stopping .......
+[ INFO] [1615071000.481212868]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -1318166528-1.5281e+07-1.5281e+07-1.77479e+12
+j1:       65535     759.721   759.721   8.8237e+07
+[ INFO] [1615071000.481873572]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         1.77479e+121.5281e+072.06132e+172.06194e+153.35065e+16
+j1:       0         -8.8237e+07-759.721  -1.02482e+13-1.02513e+11-1.66583e+12
+
+[ INFO] [1615071000.581729647]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -1318166528-1.5281e+070         0         
+j1:       65535     759.721   0         0         
+[ INFO] [1615071000.583066977]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         0         0         0         0         0         
+j1:       0         0         0         0         0         0         
+
+[ INFO] [1615071000.681295196]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -1318166528-1.5281e+070         0         
+j1:       65535     759.721   0         0         
+[ INFO] [1615071000.681684631]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         0         0         0         0         0         
+j1:       0         0         0         0         0         0         
+
+[ INFO] [1615071000.781320909]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -1318166528-1.5281e+070         0         
+j1:       65535     759.721   0         0         
+[ INFO] [1615071000.781731062]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         0         0         0         0         0         
+j1:       0         0         0         0         0         0         
+
+[ INFO] [1615071000.881284818]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -1318166528-1.5281e+070         0         
+j1:       65535     759.721   0         0         
+[ INFO] [1615071000.882475339]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         0         0         0         0         0         
+j1:       0         0         0         0         0         0         
+
+[diffbot/ydlidar_lidar_publisher-5] process has finished cleanly
+log file: /home/rod/.ros/log/a310aa38-7ecb-11eb-a649-29bca9b2d032/diffbot-ydlidar_lidar_publisher-5*.log
+[ INFO] [1615071000.981251226]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -1318166528-1.5281e+070         0         
+j1:       65535     759.721   0         0         
+[ INFO] [1615071000.981611220]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         0         0         0         0         0         
+j1:       0         0         0         0         0         0         
+
+[INFO] [1615071001.044033]: Controller Spawner: Waiting for service controller_manager/load_controller
+[INFO] [1615071001.062866]: ROS Serial Python Node
+[INFO] [1615071001.063738]: Controller Spawner: Waiting for service controller_manager/switch_controller
+[INFO] [1615071001.078966]: Controller Spawner: Waiting for service controller_manager/unload_controller
+[ INFO] [1615071001.081211364]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -1318166528-1.5281e+070         0         
+j1:       65535     759.721   0         0         
+[ INFO] [1615071001.081499797]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         0         0         0         0         0         
+j1:       0         0         0         0         0         0         
+
+[ INFO] [1615071030.981281141]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -9794     -113.538  -0.498481 -4.98475  
+j1:       9434      109.365   0.475296  4.7529    
+[ INFO] [1615071030.981881619]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         4.98475   -1.52809e+07-0.315532 -1.75849  -28.5755  
+j1:       0         -4.7529   650.356   0.300856  1.83949   29.8917   
+
+[ INFO] [1615071031.081215739]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -9837     -114.036  -0.498481 -4.98619  
+j1:       9474      109.828   0.463704  4.63832   
+[ INFO] [1615071031.081817514]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         4.98619   -1.52809e+070.0144139 -1.75469  -28.5137  
+j1:       0         -4.63832  649.892   1.14616   1.88805   30.6808   
+
+^C[diffbot/base_link_to_laser4-6] killing on exit
+[diffbot/robot_state_publisher-4] killing on exit
+[diffbot/rosserial_teensy-3] killing on exit
+[ INFO] [1615071031.181258289]: 
+Read      ticks     angle     dangle    velocity  
+j0:       -9880     -114.535  -0.498481 -4.98316  
+j1:       9514      110.292   0.463704  4.6355    
+[ INFO] [1615071031.182331322]: 
+Write     velocity  p_error   i_error   d_error   pid out   percent   
+j0:       0         4.98316   -1.52809e+07-0.0303199-1.7562   -28.5382  
+j1:       0         -4.6355   649.429   0.0282045 1.87786   30.5152   
+
+[diffbot/controller_spawner-2] killing on exit
+[diffbot/diffbot_base-1] killing on exit
+[INFO] [1615071031.190077]: Shutting down spawner. Stopping and unloading controllers...
+[INFO] [1615071031.199265]: Stopping all controllers...
+[WARN] [1615071031.494645]: Controller Spawner error while taking down controllers: unable to connect to service: [Errno 104] Connection reset by peer
+[INFO] [1615071031.798263]: Sending tx stop request
+shutting down processing monitor...
+... shutting down processing monitor complete
+done
+
