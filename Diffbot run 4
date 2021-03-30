@@ -1,0 +1,286 @@
+
+rod@raspi:~$ roslaunch diffbot_bringup bringup_with_laser.launch
+... logging to /home/rod/.ros/log/60c2e9ba-8674-11eb-9fdc-15f401727d50/roslaunch-raspi-1310.log
+Checking log directory for disk usage. This may take a while.
+Press Ctrl-C to interrupt
+Done checking log file disk usage. Usage is <1GB.
+
+WARN: unrecognized 'param' tag in <include> tag
+started roslaunch server http://raspi:41761/
+
+SUMMARY
+========
+
+PARAMETERS
+ * /diffbot/camera/realsense2_camera/accel_fps: -1
+ * /diffbot/camera/realsense2_camera/accel_frame_id: camera_accel_frame
+ * /diffbot/camera/realsense2_camera/accel_optical_frame_id: camera_accel_opti...
+ * /diffbot/camera/realsense2_camera/align_depth: False
+ * /diffbot/camera/realsense2_camera/aligned_depth_to_color_frame_id: camera_aligned_de...
+ * /diffbot/camera/realsense2_camera/aligned_depth_to_fisheye1_frame_id: camera_aligned_de...
+ * /diffbot/camera/realsense2_camera/aligned_depth_to_fisheye2_frame_id: camera_aligned_de...
+ * /diffbot/camera/realsense2_camera/aligned_depth_to_fisheye_frame_id: camera_aligned_de...
+ * /diffbot/camera/realsense2_camera/aligned_depth_to_infra1_frame_id: camera_aligned_de...
+ * /diffbot/camera/realsense2_camera/aligned_depth_to_infra2_frame_id: camera_aligned_de...
+ * /diffbot/camera/realsense2_camera/allow_no_texture_points: False
+ * /diffbot/camera/realsense2_camera/base_frame_id: camera_link
+ * /diffbot/camera/realsense2_camera/calib_odom_file: 
+ * /diffbot/camera/realsense2_camera/clip_distance: -2.0
+ * /diffbot/camera/realsense2_camera/color_fps: -1
+ * /diffbot/camera/realsense2_camera/color_frame_id: camera_color_frame
+ * /diffbot/camera/realsense2_camera/color_height: -1
+ * /diffbot/camera/realsense2_camera/color_optical_frame_id: camera_color_opti...
+ * /diffbot/camera/realsense2_camera/color_width: -1
+ * /diffbot/camera/realsense2_camera/confidence_fps: -1
+ * /diffbot/camera/realsense2_camera/confidence_height: -1
+ * /diffbot/camera/realsense2_camera/confidence_width: -1
+ * /diffbot/camera/realsense2_camera/depth_fps: -1
+ * /diffbot/camera/realsense2_camera/depth_frame_id: camera_depth_frame
+ * /diffbot/camera/realsense2_camera/depth_height: -1
+ * /diffbot/camera/realsense2_camera/depth_optical_frame_id: camera_depth_opti...
+ * /diffbot/camera/realsense2_camera/depth_width: -1
+ * /diffbot/camera/realsense2_camera/device_type: 
+ * /diffbot/camera/realsense2_camera/enable_accel: False
+ * /diffbot/camera/realsense2_camera/enable_color: True
+ * /diffbot/camera/realsense2_camera/enable_confidence: True
+ * /diffbot/camera/realsense2_camera/enable_depth: True
+ * /diffbot/camera/realsense2_camera/enable_fisheye1: False
+ * /diffbot/camera/realsense2_camera/enable_fisheye2: False
+ * /diffbot/camera/realsense2_camera/enable_fisheye: False
+ * /diffbot/camera/realsense2_camera/enable_gyro: False
+ * /diffbot/camera/realsense2_camera/enable_infra1: False
+ * /diffbot/camera/realsense2_camera/enable_infra2: False
+ * /diffbot/camera/realsense2_camera/enable_infra: False
+ * /diffbot/camera/realsense2_camera/enable_pointcloud: False
+ * /diffbot/camera/realsense2_camera/enable_pose: False
+ * /diffbot/camera/realsense2_camera/enable_sync: False
+ * /diffbot/camera/realsense2_camera/filters: 
+ * /diffbot/camera/realsense2_camera/fisheye1_frame_id: camera_fisheye1_f...
+ * /diffbot/camera/realsense2_camera/fisheye1_optical_frame_id: camera_fisheye1_o...
+ * /diffbot/camera/realsense2_camera/fisheye2_frame_id: camera_fisheye2_f...
+ * /diffbot/camera/realsense2_camera/fisheye2_optical_frame_id: camera_fisheye2_o...
+ * /diffbot/camera/realsense2_camera/fisheye_fps: -1
+ * /diffbot/camera/realsense2_camera/fisheye_frame_id: camera_fisheye_frame
+ * /diffbot/camera/realsense2_camera/fisheye_height: -1
+ * /diffbot/camera/realsense2_camera/fisheye_optical_frame_id: camera_fisheye_op...
+ * /diffbot/camera/realsense2_camera/fisheye_width: -1
+ * /diffbot/camera/realsense2_camera/gyro_fps: -1
+ * /diffbot/camera/realsense2_camera/gyro_frame_id: camera_gyro_frame
+ * /diffbot/camera/realsense2_camera/gyro_optical_frame_id: camera_gyro_optic...
+ * /diffbot/camera/realsense2_camera/imu_optical_frame_id: camera_imu_optica...
+ * /diffbot/camera/realsense2_camera/infra1_frame_id: camera_infra1_frame
+ * /diffbot/camera/realsense2_camera/infra1_optical_frame_id: camera_infra1_opt...
+ * /diffbot/camera/realsense2_camera/infra2_frame_id: camera_infra2_frame
+ * /diffbot/camera/realsense2_camera/infra2_optical_frame_id: camera_infra2_opt...
+ * /diffbot/camera/realsense2_camera/infra_fps: -1
+ * /diffbot/camera/realsense2_camera/infra_height: -1
+ * /diffbot/camera/realsense2_camera/infra_rgb: False
+ * /diffbot/camera/realsense2_camera/infra_width: -1
+ * /diffbot/camera/realsense2_camera/initial_reset: False
+ * /diffbot/camera/realsense2_camera/json_file_path: 
+ * /diffbot/camera/realsense2_camera/linear_accel_cov: 0.01
+ * /diffbot/camera/realsense2_camera/odom_frame_id: camera_odom_frame
+ * /diffbot/camera/realsense2_camera/ordered_pc: False
+ * /diffbot/camera/realsense2_camera/pointcloud_texture_index: 0
+ * /diffbot/camera/realsense2_camera/pointcloud_texture_stream: RS2_STREAM_COLOR
+ * /diffbot/camera/realsense2_camera/pose_frame_id: camera_pose_frame
+ * /diffbot/camera/realsense2_camera/pose_optical_frame_id: camera_pose_optic...
+ * /diffbot/camera/realsense2_camera/publish_odom_tf: True
+ * /diffbot/camera/realsense2_camera/publish_tf: True
+ * /diffbot/camera/realsense2_camera/rosbag_filename: 
+ * /diffbot/camera/realsense2_camera/serial_no: 
+ * /diffbot/camera/realsense2_camera/tf_publish_rate: 0.0
+ * /diffbot/camera/realsense2_camera/topic_odom_in: odom_in
+ * /diffbot/camera/realsense2_camera/unite_imu_method: 
+ * /diffbot/camera/realsense2_camera/usb_port_id: 
+ * /diffbot/hardware_interface/joints: ['front_left_whee...
+ * /diffbot/joint_state_controller/extra_joints: [{'name': 'rear_c...
+ * /diffbot/joint_state_controller/publish_rate: 10
+ * /diffbot/joint_state_controller/type: joint_state_contr...
+ * /diffbot/mobile_base_controller/angular/z/has_acceleration_limits: True
+ * /diffbot/mobile_base_controller/angular/z/has_velocity_limits: True
+ * /diffbot/mobile_base_controller/angular/z/max_acceleration: 6.0
+ * /diffbot/mobile_base_controller/angular/z/max_velocity: 2.0
+ * /diffbot/mobile_base_controller/base_frame_id: base_footprint
+ * /diffbot/mobile_base_controller/left_wheel: front_left_wheel_...
+ * /diffbot/mobile_base_controller/linear/x/has_acceleration_limits: True
+ * /diffbot/mobile_base_controller/linear/x/has_velocity_limits: True
+ * /diffbot/mobile_base_controller/linear/x/max_acceleration: 0.6
+ * /diffbot/mobile_base_controller/linear/x/max_velocity: 0.4
+ * /diffbot/mobile_base_controller/pose_covariance_diagonal: [0.001, 0.001, 0....
+ * /diffbot/mobile_base_controller/publish_rate: 10
+ * /diffbot/mobile_base_controller/right_wheel: front_right_wheel...
+ * /diffbot/mobile_base_controller/twist_covariance_diagonal: [0.001, 0.001, 0....
+ * /diffbot/mobile_base_controller/type: diff_drive_contro...
+ * /diffbot/mobile_base_controller/wheel_radius: 0.0325
+ * /diffbot/mobile_base_controller/wheel_separation: 0.2
+ * /diffbot/robot_description: <?xml version="1....
+ * /diffbot/ydlidar_node/angle_max: 180.0
+ * /diffbot/ydlidar_node/angle_min: -180.0
+ * /diffbot/ydlidar_node/auto_reconnect: True
+ * /diffbot/ydlidar_node/baudrate: 128000
+ * /diffbot/ydlidar_node/frame_id: laser_frame
+ * /diffbot/ydlidar_node/frequency: 8.0
+ * /diffbot/ydlidar_node/ignore_array: 
+ * /diffbot/ydlidar_node/port: /dev/ydlidar
+ * /diffbot/ydlidar_node/range_max: 12.0
+ * /diffbot/ydlidar_node/range_min: 0.1
+ * /diffbot/ydlidar_node/resolution_fixed: True
+ * /diffbot/ydlidar_node/reversion: False
+ * /diffbot/ydlidar_node/samp_rate: 5
+ * /rosdistro: noetic
+ * /rosversion: 1.15.9
+
+NODES
+  /diffbot/
+    base_link_to_laser4 (tf/static_transform_publisher)
+    controller_spawner (controller_manager/spawner)
+    diffbot_base (diffbot_base/diffbot_base)
+    robot_state_publisher (robot_state_publisher/robot_state_publisher)
+    rosserial_teensy (rosserial_python/serial_node.py)
+    ydlidar_node (ydlidar_ros/ydlidar_node)
+  /diffbot/camera/
+    realsense2_camera (nodelet/nodelet)
+    realsense2_camera_manager (nodelet/nodelet)
+
+auto-starting new master
+process[master]: started with pid [1322]
+ROS_MASTER_URI=http://192.168.1.179:11311/
+
+setting /run_id to 60c2e9ba-8674-11eb-9fdc-15f401727d50
+process[rosout-1]: started with pid [1332]
+started core service [/rosout]
+process[diffbot/diffbot_base-2]: started with pid [1335]
+process[diffbot/controller_spawner-3]: started with pid [1336]
+process[diffbot/rosserial_teensy-4]: started with pid [1338]
+process[diffbot/robot_state_publisher-5]: started with pid [1342]
+process[diffbot/ydlidar_node-6]: started with pid [1343]
+process[diffbot/base_link_to_laser4-7]: started with pid [1344]
+__   ______  _     ___ ____    _    ____  
+\ \ / /  _ \| |   |_ _|  _ \  / \  |  _ \ 
+ \ V /| | | | |    | || | | |/ _ \ | |_) | 
+  | | | |_| | |___ | || |_| / ___ \|  _ <  
+  |_| |____/|_____|___|____/_/   \_\_| \_\ 
+
+process[diffbot/camera/realsense2_camera_manager-8]: started with pid [1353]
+process[diffbot/camera/realsense2_camera-9]: started with pid [1357]
+[ INFO] [1615912002.016575866]: Waiting for model URDF on the ROS param server at location: /diffbot/diffbot/robot_description
+[ INFO] [1615912002.192856199]: [YDLIDAR INFO] Now YDLIDAR ROS SDK VERSION:1.4.6 .......
+[ INFO] [1615912002.198008255]: Initializing DiffBot Hardware Interface ...
+[ INFO] [1615912002.198166069]: Number of joints: 2
+[ INFO] [1615912002.198487718]: pid namespace: pid/left_motor
+[ INFO] [1615912002.198604199]: Initialize PID
+[ INFO] [1615912002.198684884]: Initializing dynamic reconfigure in namespace /diffbot/pid/left_motor
+YDLidar SDK initializing
+YDLidar SDK has been initialized
+[YDLIDAR]:SDK Version: 1.4.7
+[ INFO] [1615912002.238361236]: Initializing nodelet with 4 worker threads.
+[ INFO] [1615912002.320638403]: Update PID Gains: F=0.8, P=0.35, I=0.5, D=0.01, out_min=-12.3077, out_max=12.3077
+LiDAR successfully connected
+[ INFO] [1615912002.349477458]: Initialized dynamic reconfigure
+[ INFO] [1615912002.350700255]: Initialized PID: F=0.8, P=0.35, I=0.5, D=0.01, out_min=-12.3077, out_max=12.3077
+[ INFO] [1615912002.351742143]: Update PID output limits: lower=12.3077, upper=-12.3077
+[ INFO] [1615912002.354286051]: pid namespace: pid/right_motor
+[ INFO] [1615912002.355791403]: Initialize PID
+[ INFO] [1615912002.356971810]: Initializing dynamic reconfigure in namespace /diffbot/pid/right_motor
+[ INFO] [1615912002.441482125]: Update PID Gains: F=0.8, P=0.35, I=0.5, D=0.01, out_min=-12.3077, out_max=12.3077
+[ INFO] [1615912002.467557588]: Initialized dynamic reconfigure
+[ INFO] [1615912002.467984680]: Initialized PID: F=0.8, P=0.35, I=0.5, D=0.01, out_min=-12.3077, out_max=12.3077
+[ INFO] [1615912002.468226495]: Update PID output limits: lower=12.3077, upper=-12.3077
+[ INFO] [1615912002.469404384]: ... Done Initializing DiffBot Hardware Interface
+[YDLIDAR]:Lidar running correctly ! The health status: good
+[YDLIDAR] Connection established in [/dev/ydlidar][128000]:
+Firmware version: 1.10
+Hardware version: 1
+Model: X4
+Serial: 2020062200002216
+LiDAR init success!
+[INFO] [1615912002.966032]: Controller Spawner: Waiting for service controller_manager/load_controller
+[INFO] [1615912002.986006]: Controller Spawner: Waiting for service controller_manager/switch_controller
+[INFO] [1615912003.003220]: Controller Spawner: Waiting for service controller_manager/unload_controller
+[INFO] [1615912003.024217]: Loading controller: joint_state_controller
+[INFO] [1615912003.076813]: ROS Serial Python Node
+[INFO] [1615912003.112144]: Connecting to /dev/ttyACM0 at 115200 baud
+[INFO] [1615912003.120686]: Loading controller: mobile_base_controller
+[ INFO] [1615912003.193495624]: Controller state will be published at 10Hz.
+[ INFO] [1615912003.199421106]: Wheel separation will be multiplied by 1.
+[ INFO] [1615912003.207717458]: Left wheel radius will be multiplied by 1.
+[ INFO] [1615912003.208007921]: Right wheel radius will be multiplied by 1.
+[ INFO] [1615912003.210912254]: Velocity rolling window size of 10.
+[ INFO] [1615912003.215344661]: Velocity commands will be considered old if they are older than 0.5s.
+[ INFO] [1615912003.218541347]: Allow mutiple cmd_vel publishers is enabled
+[ INFO] [1615912003.225415550]: Base frame_id set to base_footprint
+[ INFO] [1615912003.229007439]: Odometry frame_id set to odom
+[ INFO] [1615912003.232084884]: Publishing to tf is enabled
+[ INFO] [1615912003.303593921]: Odometry params : wheel separation 0.2, left wheel radius 0.0325, right wheel radius 0.0325
+[ INFO] [1615912003.319762809]: Adding left wheel with joint name: front_left_wheel_joint and right wheel with joint name: front_right_wheel_joint
+[ INFO] [1615912003.396503587]: Dynamic Reconfigure:
+DynamicParams:
+	Odometry parameters:
+		left wheel radius multiplier: 1
+		right wheel radius multiplier: 1
+		wheel separation multiplier: 1
+	Publication parameters:
+		Publish executed velocity command: disabled
+		Publication rate: 10
+		Publish frame odom on tf: enabled
+[INFO] [1615912003.420549]: Controller Spawner: Loaded controllers: joint_state_controller, mobile_base_controller
+[INFO] [1615912003.520629]: Started controllers: joint_state_controller, mobile_base_controller
+[YDLIDAR INFO] Current Sampling Rate : 5K
+[YDLIDAR INFO] Now YDLIDAR is scanning ......
+[ INFO] [1615912004.502523531]: RealSense ROS v2.2.22
+[ INFO] [1615912004.502635364]: Built with LibRealSense v2.42.0
+[ INFO] [1615912004.502700438]: Running with LibRealSense v2.42.0
+[ INFO] [1615912004.571215661]:  
+[ INFO] [1615912004.899267346]: Device with serial number 819112071357 was found.
+
+[ INFO] [1615912004.899539772]: Device with physical ID 1-1.1-3 was found.
+[ INFO] [1615912004.899714142]: Device with name Intel RealSense D435 was found.
+[ INFO] [1615912004.903140827]: Device with port number 1-1.1 was found.
+[ INFO] [1615912004.903383253]: Device USB type: 2.1
+[ WARN] [1615912004.903547383]: Device 819112071357 is connected using a 2.1 port. Reduced performance is expected.
+[ INFO] [1615912004.913277457]: getParameters...
+[INFO] [1615912005.236225]: Requesting topics...
+[ INFO] [1615912005.257968068]: setupDevice...
+[ INFO] [1615912005.258217179]: JSON file is not provided
+[ INFO] [1615912005.258369994]: ROS Node Namespace: diffbotcamera
+[ INFO] [1615912005.258510697]: Device Name: Intel RealSense D435
+[ INFO] [1615912005.258629308]: Device Serial No: 819112071357
+[ INFO] [1615912005.258746882]: Device physical port: 1-1.1-3
+[ INFO] [1615912005.258883660]: Device FW version: 05.12.10.00
+[ INFO] [1615912005.259010012]: Device Product ID: 0x0B07
+[ INFO] [1615912005.259133105]: Enable PointCloud: Off
+[ INFO] [1615912005.259263494]: Align Depth: Off
+[ INFO] [1615912005.259409456]: Sync Mode: Off
+[ INFO] [1615912005.259650716]: Device Sensors: 
+[INFO] [1615912005.288752]: Note: publish buffer size is 512 bytes
+[INFO] [1615912005.296706]: Setup publisher on encoder_ticks [diffbot_msgs/Encoder]
+[ INFO] [1615912005.311065068]: Stereo Module was found.
+[INFO] [1615912005.348382]: Note: subscribe buffer size is 512 bytes
+[ INFO] [1615912005.366979845]: RGB Camera was found.
+[ INFO] [1615912005.367410845]: (Confidence, 0) sensor isn't supported by current device! -- Skipping...
+[ INFO] [1615912005.367600808]: num_filters: 0
+[ INFO] [1615912005.367755123]: Setting Dynamic reconfig parameters.
+[INFO] [1615912005.370962]: Setup subscriber on motor_left [std_msgs/Int32]
+[INFO] [1615912005.405328]: Setup subscriber on reset [std_msgs/Empty]
+[INFO] [1615912005.434981]: Setup subscriber on motor_right [std_msgs/Int32]
+[ INFO] [1615912006.000161530]: Done Setting Dynamic reconfig parameters.
+[ INFO] [1615912006.005916382]: depth stream is enabled - width: 640, height: 480, fps: 15, Format: Z16
+[ INFO] [1615912006.008177808]: color stream is enabled - width: 640, height: 480, fps: 15, Format: RGB8
+[ INFO] [1615912006.008451382]: setupPublishers...
+[ INFO] [1615912006.024318604]: Expected frequency for depth = 15.00000
+[ INFO] [1615912006.203625493]: Expected frequency for color = 15.00000
+[ INFO] [1615912006.300343919]: setupStreams...
+[ INFO] [1615912006.325947493]: insert Depth to Stereo Module
+[ INFO] [1615912006.326332493]: insert Color to RGB Camera
+ 16/03 11:26:46,522 WARNING [281473041940848] (messenger-libusb.cpp:42) control_transfer returned error, index: 768, error: No data available, number: 61
+[ INFO] [1615912006.574344271]: SELECTED BASE:Depth, 0
+[ INFO] [1615912006.637249789]: RealSense Node Is Up!
+[ WARN] [1615912006.765120641]: 
+ 16/03 11:26:46,879 WARNING [281473041940848] (messenger-libusb.cpp:42) control_transfer returned error, index: 768, error: No data available, number: 61
+ 16/03 11:26:46,961 WARNING [281473041940848] (messenger-libusb.cpp:42) control_transfer returned error, index: 768, error: No data available, number: 61
+ 16/03 11:26:47,012 WARNING [281473041940848] (messenger-libusb.cpp:42) control_transfer returned error, index: 768, error: No data available, number: 61
+ 16/03 11:26:47,368 WARNING [281473041940848] (messenger-libusb.cpp:42) control_transfer returned error, index: 768, error: No data available, number: 61
+ 16/03 11:26:47,419 WARNING [281473041940848] (messenger-libusb.cpp:42) control_transfer returned error, index: 768, error: No data available, number: 61
+ 
+ 
