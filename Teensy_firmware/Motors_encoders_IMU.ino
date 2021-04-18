@@ -171,7 +171,7 @@ void loop()
     /* Get new sensor events with the readings */
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);
-  delay(5);
+  delay(10);
   
   //nh.loginfo("In main loop now.");
   if (newLeft != positionLeft || newRight != positionRight) {
@@ -186,10 +186,10 @@ void loop()
         ros::Time ros_time;
         imu_msg.header.stamp = ros_time;
         imu_msg.header.frame_id = "base_link";
-	    imu_msg.linear_acceleration.x = (a.acceleration.x) * GRAVITY;
+        imu_msg.linear_acceleration.x = (a.acceleration.x) * GRAVITY;
         imu_msg.linear_acceleration.y = (a.acceleration.y) * GRAVITY;
         imu_msg.linear_acceleration.z = (a.acceleration.z) * GRAVITY;
-	    imu_msg.angular_velocity.x = (g.gyro.x)*3.1415926/180;
+        imu_msg.angular_velocity.x = (g.gyro.x)*3.1415926/180;
         imu_msg.angular_velocity.y = (g.gyro.y)*3.1415926/180;
         imu_msg.angular_velocity.z = (g.gyro.z)*3.1415926/180;
 	// https://github.com/Russ76/ros_mpu6050_node-1/blob/master/src/mpu6050_node.cpp
