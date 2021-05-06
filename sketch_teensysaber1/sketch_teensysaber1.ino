@@ -1,7 +1,7 @@
 // Teensy board
 // Uses Sabertooth motor controller
-// Motor scale for needed input:
-// Callback routine multiplies number by 5 for full range
+// Motor scale for needed input: -0.5 to 0.5
+// Callback routine multiplies number by 70 for full range
 // Encoder messages published
 // Adafruit_MPU6050 code added
 
@@ -21,14 +21,14 @@ Adafruit_MPU6050 mpu;
 #define GRAVITY 9.81 // 0.00059855
 #define MOTOR_TIMEOUT_MS 1000
 
-
 // int motorTimer;
 
 // Motor definitions to make life easier:
 // #define MOTOR_A 1
 // #define MOTOR_B 0
 int pwrLeft = 64;  // start with brakes on
-int pwrRight = 192;
+int pwrRight = 192; // this is Sabertooth's method of simplified serial
+// Each motor has 7 bits of speed resolution
 float angularboost = 1.75;
 float linx;
 float angZ;
