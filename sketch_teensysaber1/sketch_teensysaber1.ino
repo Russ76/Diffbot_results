@@ -1,6 +1,7 @@
 // Teensy board
 // Uses Sabertooth motor controller
 // Motor scale for needed input: -0.5 to 0.5
+// Will work directly with Joy and teleop_twist_joy messages
 // Callback routine multiplies number by 70 for full range
 // Encoder messages published
 // Adafruit_MPU6050 code added
