@@ -1,5 +1,5 @@
-// Teensy board
-// Uses Sabertooth motor controller
+// Teensy board 3.2
+// Uses Sabertooth motor controller, 2x12 or 2x25
 // Motor scale for needed input: -0.5 to 0.5
 // Will work directly with Joy and teleop_twist_joy messages
 // Callback routine multiplies number by 70 for full range
@@ -11,7 +11,6 @@
 #include <std_msgs/Int32.h>
 #include "sensor_msgs/Imu.h"
 #include <geometry_msgs/Twist.h>
-// #include <diffbot_msgs/Encoder.h>
 #include <std_msgs/Empty.h>
 #include <Adafruit_MPU6050.h>
 #include <Adafruit_Sensor.h>
@@ -24,12 +23,10 @@ Adafruit_MPU6050 mpu;
 
 // int motorTimer;
 
-// Motor definitions to make life easier:
-// #define MOTOR_A 1
-// #define MOTOR_B 0
 int pwrLeft = 64;  // start with brakes on
 int pwrRight = 192; // this is Sabertooth's method of simplified serial
 // Each motor has 7 bits of speed resolution
+// Angular boost makes turning stronger, useful for skid steer or tracked units
 float angularboost = 1.75;
 float linx;
 float angZ;
@@ -37,8 +34,8 @@ float angZ;
 // Encoder setup
 #define ENCODER_OPTIMIZE_INTERRUPTS //Only for Teensy (3.2 tested, works well!)
 #include <Encoder.h>
-Encoder encoderLeft(2, 3); // MOTOR A encoder data
-Encoder encoderRight(4, 5);// MOTOR B encoder data
+Encoder encoderLeft(2, 3); // Pins on Teensy for MOTOR A encoder data
+Encoder encoderRight(4, 5);// pins on Teensy for MOTOR B encoder data
 
 ros::NodeHandle nh;
 
@@ -56,7 +53,8 @@ void messageCb( const geometry_msgs::Twist& msg)
 	linx = msg.linear.x * 70;
 	angZ = msg.angular.z *70 * angularboost;
 // motorTimer = millis();
-
+// Twist data converted into motor commands here
+	
 	if(linx == 0){  // turning
 		pwrRight = angZ;
 		pwrLeft = (-1) * pwrRight;
@@ -157,7 +155,7 @@ void loop()
 	// https://github.com/Russ76/ros_mpu6050_node-1/blob/master/src/mpu6050_node.cpp
 	imu_pub.publish(&imu_msg);
 	
-  Serial2.write(pwrLeft); // motor speed
+  Serial2.write(pwrLeft); // motor speed and stop
   Serial2.write(pwrRight); // Power motors both directions
 	
 }
