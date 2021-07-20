@@ -136,7 +136,6 @@ void loop()
     /* Get new sensor events with the readings */
   sensors_event_t a, g, temp;
   mpu.getEvent(&a, &g, &temp);
-  delay(15);
   
   //nh.loginfo("In main loop now.");
 	
@@ -154,8 +153,8 @@ void loop()
         imu_msg.angular_velocity.z = (g.gyro.z)*3.1415926/180;
 	// https://github.com/Russ76/ros_mpu6050_node-1/blob/master/src/mpu6050_node.cpp
 	imu_pub.publish(&imu_msg);
-	
+		
   Serial2.write(pwrLeft); // motor speed and stop
   Serial2.write(pwrRight); // Power motors both directions
-	
+    delay(15);
 }
