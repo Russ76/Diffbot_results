@@ -15,3 +15,8 @@ added the Jetson TX1 to underside of upper platforn, and now using the ZED camer
 So many changes! I will post new photos soon. Trying to stream video back to Oculus Quest 2
 VR headset from the ZED. Tilting and turning the head will control camera pan & tilt.
 Will use Unity, ROS, and ZED.
+
+Use the Teensy/Saber code if you're using the Sabertooth. This board has its own
+method of serial control and it works very well. The Teensy doesn't need any
+changing of Cmd/Vel ROS message, it converts this itself into motor controls.
+Therefore this unit makes for responsive and accurate control.
